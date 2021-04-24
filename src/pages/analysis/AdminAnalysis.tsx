@@ -80,9 +80,9 @@ class AdminAnalysis extends Component<analysisProps, analysisState> {
           <Suspense fallback={<PageLoading />}>
             <IntroduceRow loading={loading} visitData={visitData} />
           </Suspense>
-          <Suspense fallback={null}>
-            <SalesCard loading={loading} />
-          </Suspense>
+          {/*<Suspense fallback={null}>*/}
+          {/*  <SalesCard loading={loading} />*/}
+          {/*</Suspense>*/}
           {/* <Row gutter={24}>
             <Col xl={10} lg={24} md={24} sm={24} xs={24}>
               <Suspense fallback={null}>

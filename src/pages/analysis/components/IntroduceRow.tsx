@@ -321,27 +321,27 @@ const IntroduceRow = ({ loading, visitData }: { loading: boolean; visitData: IVi
         </Spin>
       </Col>
 
-      <Col {...topColResponsiveProps}>
-        <ChartCard
-          loading={loading}
-          bordered={false}
-          title='CPU使用率'
-          contentHeight={120}
-        >
-          <GaugeColor height={169} percent={cpu} />
-        </ChartCard>
-      </Col>
+      {/*<Col {...topColResponsiveProps}>*/}
+      {/*  <ChartCard*/}
+      {/*    loading={loading}*/}
+      {/*    bordered={false}*/}
+      {/*    title='CPU使用率'*/}
+      {/*    contentHeight={120}*/}
+      {/*  >*/}
+      {/*    <GaugeColor height={169} percent={cpu} />*/}
+      {/*  </ChartCard>*/}
+      {/*</Col>*/}
 
-      <Col {...topColResponsiveProps}>
-        <ChartCard
-          loading={loading}
-          bordered={false}
-          title='JVM内存'
-          contentHeight={120}
-        >
-          <Gauge height={169} percent={memoryUsed} memoryMax={memoryMax} />
-        </ChartCard>
-      </Col>
+      {/*<Col {...topColResponsiveProps}>*/}
+      {/*  <ChartCard*/}
+      {/*    loading={loading}*/}
+      {/*    bordered={false}*/}
+      {/*    title='JVM内存'*/}
+      {/*    contentHeight={120}*/}
+      {/*  >*/}
+      {/*    <Gauge height={169} percent={memoryUsed} memoryMax={memoryMax} />*/}
+      {/*  </ChartCard>*/}
+      {/*</Col>*/}
     </Row>
   );
 };
