@@ -30,6 +30,7 @@ export const routes = [
           //     component: './demo'
           // },
           {
+            hideInMenu: true,
             name: '统计分析',
             path: '/analysis',
             icon: 'dashboard',
@@ -351,6 +352,7 @@ export const routes = [
             ],
           },
           {
+            hideInMenu: true,
             path: 'notice',
             name: '通知管理',
             iconfont: 'icon-tongzhiguanli',
@@ -438,6 +440,7 @@ export const routes = [
             ],
           },
           {
+            hideInMenu: true,
             path: 'data-screen',
             name: '可视化',
             icon: 'desktop',
@@ -484,6 +487,7 @@ export const routes = [
             ],
           },
           {
+            hideInMenu: true,
             path: 'simulator',
             name: '模拟测试',
             icon: 'bug',
@@ -501,6 +505,7 @@ export const routes = [
             ],
           },
           {
+            hideInMenu: true,
             path: 'logger',
             name: '日志管理',
             icon: 'calendar',
@@ -526,6 +531,7 @@ export const routes = [
             ],
           },
           {
+            hideInMenu: true,
             path: 'cloud',
             name: '云云对接',
             icon: 'cloud',
@@ -567,6 +573,7 @@ export const routes = [
             ],
           },
           {
+            hideInMenu: true,
             path: 'media',
             name: '视频网关',
             icon: 'youtube',
@@ -640,6 +647,7 @@ export const routes = [
             ],
           },
           {
+            hideInMenu: true,
             path: 'edge-gateway',
             name: '边缘网关',
             icon: 'gateway',
