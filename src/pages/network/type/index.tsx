@@ -211,47 +211,47 @@ const Type: React.FC<Props> = props => {
   return (
     <PageHeaderWrapper title="组件管理">
       <div className={styles.filterCardList}>
-        <Card bordered={false}>
-          <Form layout="inline">
-            <StandardFormRow title="组件类型" block style={{ paddingBottom: 11 }}>
-              <Row gutter={24}>
-                <Col lg={20}>
-                  <Form.Item>
-                    <TagSelect
-                      expandable
-                      onChange={(value: any[]) => {
-                        setFilterType(value);
-                        onSearch(value, undefined);
-                      }}
-                    >
-                      {supportsType.map(item => (
-                        <TagSelect.Option key={item.id} value={item.id}>
-                          {item.name}
-                        </TagSelect.Option>
-                      ))}
-                    </TagSelect>
-                  </Form.Item>
-                </Col>
-              </Row>
+        {/*<Card bordered={false}>*/}
+        {/*  <Form layout="inline">*/}
+        {/*    <StandardFormRow title="组件类型" block style={{ paddingBottom: 11 }}>*/}
+        {/*      <Row gutter={24}>*/}
+        {/*        <Col lg={20}>*/}
+        {/*          <Form.Item>*/}
+        {/*            <TagSelect*/}
+        {/*              expandable*/}
+        {/*              onChange={(value: any[]) => {*/}
+        {/*                setFilterType(value);*/}
+        {/*                onSearch(value, undefined);*/}
+        {/*              }}*/}
+        {/*            >*/}
+        {/*              {supportsType.map(item => (*/}
+        {/*                <TagSelect.Option key={item.id} value={item.id}>*/}
+        {/*                  {item.name}*/}
+        {/*                </TagSelect.Option>*/}
+        {/*              ))}*/}
+        {/*            </TagSelect>*/}
+        {/*          </Form.Item>*/}
+        {/*        </Col>*/}
+        {/*      </Row>*/}
 
-            </StandardFormRow>
-            <StandardFormRow title="其它选项" grid last>
-              <Row gutter={16}>
-                <Col lg={8} md={10} sm={10} xs={24}>
-                  <Form.Item {...formItemLayout} label="配置名称">
-                    <Input
-                      onChange={e => {
-                        setFilterName(e.target.value);
-                        onSearch(undefined, e.target.value);
-                      }}
-                    />
-                  </Form.Item>
-                </Col>
-              </Row>
-            </StandardFormRow>
-          </Form>
-        </Card>
-        <br />
+        {/*    </StandardFormRow>*/}
+        {/*    <StandardFormRow title="其它选项" grid last>*/}
+        {/*      <Row gutter={16}>*/}
+        {/*        <Col lg={8} md={10} sm={10} xs={24}>*/}
+        {/*          <Form.Item {...formItemLayout} label="配置名称">*/}
+        {/*            <Input*/}
+        {/*              onChange={e => {*/}
+        {/*                setFilterName(e.target.value);*/}
+        {/*                onSearch(undefined, e.target.value);*/}
+        {/*              }}*/}
+        {/*            />*/}
+        {/*          </Form.Item>*/}
+        {/*        </Col>*/}
+        {/*      </Row>*/}
+        {/*    </StandardFormRow>*/}
+        {/*  </Form>*/}
+        {/*</Card>*/}
+        {/*<br />*/}
         <List<any>
           rowKey="id"
           grid={{ gutter: 24, xl: 4, lg: 3, md: 3, sm: 2, xs: 1 }}
@@ -273,35 +273,52 @@ const Type: React.FC<Props> = props => {
                       //     }}
                       //   />
                       // </Tooltip>,
-                      <Tooltip key="edit" title="编辑">
-                        <Icon
-                          type="edit"
-                          onClick={() => {
-                            setSaveVisible(true);
-                            setCurrentItem(item);
-                          }}
-                        />
-                      </Tooltip>,
-                      <Tooltip key="bug" title="调试">
-                        <Icon
-                          type="bug"
-                          onClick={() => {
-                            setCurrentItem(item);
-                            setDebuggerVisible(true);
-                          }}
-                        />
-                      </Tooltip>,
-                      <Tooltip key="delete" title="删除">
-                        <Popconfirm
-                          placement="topRight"
-                          title="确定删除此组件吗？"
-                          onConfirm={() => {
-                            remove(item.id);
-                          }}
-                        >
-                          <Icon type="close" />
-                        </Popconfirm>
-                      </Tooltip>,
+                      // <Tooltip key="edit" title="编辑">
+                      //   <Icon
+                      //     type="edit"
+                      //     onClick={() => {
+                      //       setSaveVisible(true);
+                      //       setCurrentItem(item);
+                      //     }}
+                      //   />
+                      // </Tooltip>,
+                      <Button
+                        key="edit"
+                        type="link"
+                        onClick={() => {
+                          setSaveVisible(true);
+                          setCurrentItem(item);
+                        }}
+                      >编辑</Button>,
+                      // <Tooltip key="bug" title="调试">
+                      //   <Icon
+                      //     type="bug"
+                      //     onClick={() => {
+                      //       setCurrentItem(item);
+                      //       setDebuggerVisible(true);
+                      //     }}
+                      //   />
+                      // </Tooltip>,
+                      // <Tooltip key="delete" title="删除">
+                      //   <Popconfirm
+                      //     placement="topRight"
+                      //     title="确定删除此组件吗？"
+                      //     onConfirm={() => {
+                      //       remove(item.id);
+                      //     }}
+                      //   >
+                      //     <Icon type="close" />
+                      //   </Popconfirm>
+                      // </Tooltip>,
+                      <Popconfirm
+                        placement="topRight"
+                        title="确定删除此组件吗？"
+                        onConfirm={() => {
+                          remove(item.id);
+                        }}
+                      >
+                        <Button type={"link"}>删除</Button>
+                      </Popconfirm>
 
                       // <Dropdown key="ellipsis" overlay={itemMenu}>
                       //     <Icon type="ellipsis" />
